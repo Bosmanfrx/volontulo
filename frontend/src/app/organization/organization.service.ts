@@ -1,7 +1,8 @@
-import { Injectable } from "@angular/core";
-import { environment } from "../../environments/environment";
-import { Http } from "@angular/http";
-import { ReplaySubject } from "rxjs/ReplaySubject";
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
+
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class OrganizationService {
