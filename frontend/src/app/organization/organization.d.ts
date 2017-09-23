@@ -1,5 +1,5 @@
 interface Organization {
-  id: number,
+  id: number;
   slug: string;
   name: string;
   url: string;
