@@ -1,12 +1,13 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 import { OrganizationService } from './organization.service';
 
 describe('OrganizationService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [OrganizationService, Http]
+      imports: [HttpModule],
+      providers: [OrganizationService]
     });
   });
 
