@@ -57,6 +57,7 @@ class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Organization
         fields = (
+            'address',
             'id',
             'name',
             'slug',

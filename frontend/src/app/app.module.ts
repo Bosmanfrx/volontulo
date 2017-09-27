@@ -14,12 +14,17 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CookieLawBannerComponent } from './cookie-law-banner/cookie-law-banner.component';
 import { AboutUsComponent } from './static/about-us.component';
+import { OrganizationListComponent } from './organization/organization-list/organization-list.component';
 
 const appRoutes: Routes = [
   // {
   //   path: '',
   //   component: HomeComponent
   // },
+  {
+    path: 'organizations',
+    component: OrganizationListComponent
+  },
   {
     path: 'o-nas',
     component: AboutUsComponent
@@ -38,7 +43,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     CookieLawBannerComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    OrganizationListComponent,
   ],
   imports: [
     BrowserModule,
