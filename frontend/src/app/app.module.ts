@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { CookieLawBannerComponent } from './cookie-law-banner/cookie-law-banner.component';
 import { AboutUsComponent } from './static/about-us.component';
 import { OrganizationListComponent } from './organization/organization-list/organization-list.component';
+import { OrganizationService } from './organization/organization.service';
 
 const appRoutes: Routes = [
   // {
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
     CookieModule.forRoot()
   ],
   providers: [
+    OrganizationService,
     { provide: WindowService, useFactory: WindowFactory }
   ],
   bootstrap: [AppComponent]

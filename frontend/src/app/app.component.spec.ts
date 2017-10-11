@@ -31,10 +31,10 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        RouterOutletStubComponent,
-        HeaderComponent,
+        CookieLawBannerComponent,
         FooterComponent,
-        CookieLawBannerComponent
+        HeaderComponent,
+        RouterOutletStubComponent
       ],
     }).compileComponents();
   }));

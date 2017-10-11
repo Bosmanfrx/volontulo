@@ -1,6 +1,6 @@
 <div class="container">
     <h1 class="page-header">Lista organizacji</h1>
-    <div *ngIf="organizations.length">
+    <div *ngIf="( organizations$ | async)">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -9,7 +9,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let organization of organizations">
+            <tr *ngFor="let organization of organizations$ | async">
                 <td>
                     <a [routerLink]="['/organizations', organization.slug, organization.id]">{{ organization.name }}</a>
                 </td>
@@ -18,5 +18,5 @@
             </tbody>
         </table>
     </div>
-    <p *ngIf="!organizations.length">Brak zdefiniowanych organizacji.</p>
+    <p *ngIf="!( organizations$ | async ) ">Brak zdefiniowanych organizacji.</p>
 </div>

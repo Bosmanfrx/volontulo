@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OrganizationService } from '../organization.service';
 import { Organization } from '../organization.model';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'volontulo-organization-list',
   templateUrl: './organization-list.component.html',
-  providers: [OrganizationService]
 })
-export class OrganizationListComponent {
+export class OrganizationListComponent implements OnInit {
 
-  organizations: Organization[];
+  organizations$: Observable<Organization[]>;
+
+  ngOnInit() {
+    this.organizations$ = this.orgService.organizations$
+  }
 
   constructor(private orgService: OrganizationService) {
-    this.orgService.query().subscribe((orgs: Organization[]) => this.organizations = orgs)
   }
 }
