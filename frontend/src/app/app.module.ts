@@ -48,6 +48,7 @@ import { RegisterComponent } from './register/register.component';
 import { ActivationComponent } from './activation/activation.component';
 import { LoggedInGuard } from './guards/loggedInGuard.service';
 import { LoggedOutGuard } from './guards/loggedOutGuard.service';
+import { MetatagsService } from './metatags.service';
 
 Raven.config(environment.sentryDSN).install();
 
@@ -193,6 +194,7 @@ registerLocaleData(localePl);
     CookieModule.forRoot()
   ],
   providers: [
+    MetatagsService,
     AuthService,
     OffersService,
     OrganizationService,
